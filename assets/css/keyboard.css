@@ -1,0 +1,17 @@
+.contact {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  border-top: 1px #ccc solid;
+}
+
+/* Solution: removal of outline:none CSS */
+
+/* .link1 {
+      outline:none;
+    } */
+
+/* link2 styling not needed when span refactored to link, optional to delete */
+.link2 {
+  color: blue;
+  text-decoration: underline;
+}

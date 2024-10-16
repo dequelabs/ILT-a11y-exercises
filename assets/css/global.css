@@ -1,0 +1,511 @@
+@charset "UTF-8";
+/*------------------------------------------------------------------
+[Table of contents] - Global Styles
+
+A) Imports
+    1) Body
+    2) Margins & Padding
+    3) Typography
+        1) Paragraphs
+        2) Headings
+        3) Lists
+        4) Links
+        5) Blockquotes
+    4) Forms
+        1) Input Fields
+        2) Form Control
+    5) Buttons
+    6) Page Header
+        1) Top Header
+        2) Single Page Header
+    7) Navigation
+    8) Alerts
+        1) Common Alerts
+        2) Error
+        3) Success
+
+    9) Bootstrap Card Styles
+
+
+-------------------------------------------------------------------*/
+/*=== Imports ===*/
+@import url("https://fonts.googleapis.com/css?family=Poppins:300,400,500");
+
+/*=== Body ===*/
+body {
+  line-height: 1.5;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*=== Margins & Padding ===*/
+.mt-10 {
+  margin-top: 1.3rem;
+}
+
+.mt-20 {
+  margin-top: 1.3rem;
+}
+
+.mt-30 {
+  margin-top: 30px;
+}
+
+.mt-40 {
+  margin-top: 3rem;
+}
+
+.mt-50 {
+  margin-top: 3rem;
+}
+
+.btn:focus {
+  color: #ddd;
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.margin-0 {
+  margin: 0 !important;
+}
+
+.padding {
+  padding: 5rem;
+}
+
+/*=== Typography ===*/
+p {
+  font-family: "Poppins", sans-serif;
+  color: #757575;
+  font-size: 1.25rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Poppins", sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 400;
+}
+
+ol,
+ul {
+  margin: 1.25rem 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+  color: #000;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+a:focus,
+a:hover {
+  text-decoration: none;
+  outline: 0;
+  color: #0d6efd;
+}
+
+blockquote {
+  font-size: 1.1rem;
+  border-color: #000;
+  padding: 1.3rem 3rem;
+  text-align: left;
+  color: #777;
+}
+
+caption {
+  color: #757575;
+}
+
+/*=== Forms ===*/
+input[type="email"],
+input[type="password"],
+input[type="text"],
+input[type="tel"] {
+  border-radius: 0;
+  box-shadow: none;
+  height: 3rem;
+  outline: none;
+  font-weight: 200;
+  font-size: 1rem;
+}
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="text"]:focus,
+input[type="tel"]:focus {
+  box-shadow: none;
+  border: 0.13rem solid #000;
+}
+
+.form-control {
+  box-shadow: none;
+  border-radius: 0;
+}
+.form-control:focus {
+  box-shadow: none;
+  border: 0.13rem solid #000;
+}
+
+/*=== Buttons ===*/
+.btn-main p {
+  color: #fff;
+  font-size: 1rem;
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.btn-outline-dark p {
+  color: #000;
+  font-size: 1rem;
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 500;
+}
+
+.btn-outline-dark {
+  color: #000;
+  background: #fff;
+  border: 0.13rem solid #000;
+  display: inline-block;
+  letter-spacing: 0.13rem;
+  padding: 1.5rem;
+  text-transform: uppercase;
+  margin-right: 3rem;
+  text-decoration: none;
+}
+.btn-outline-dark:hover {
+  color: black;
+  background: #fff;
+}
+
+.btn-success {
+  background-color: #3a833a;
+}
+
+.btn-main,
+.btn-small,
+.btn-transparent,
+.btn-solid-border {
+  background: #000;
+  color: #fff;
+  display: inline-block;
+  letter-spacing: 0.13rem;
+  padding: 1.5rem;
+  text-transform: uppercase;
+  margin-right: 3rem;
+  text-decoration: none;
+}
+.btn-main.btn-icon i,
+.btn-icon.btn-small i,
+.btn-icon.btn-transparent i,
+.btn-icon.btn-solid-border i {
+  font-size: 1rem;
+  vertical-align: middle;
+  margin-right: 0.4rem;
+}
+.btn-main:hover,
+.btn-small:hover,
+.btn-transparent:hover,
+.btn-solid-border:hover {
+  background: black;
+  color: #fff;
+}
+
+.btn-solid-border {
+  border: 0.13rem solid #000;
+  background: #fff;
+  color: #000;
+}
+
+.btn-transparent {
+  background: transparent;
+  padding: 0;
+  color: #000;
+}
+.btn-transparent:hover {
+  background: transparent;
+  color: #000;
+}
+
+.btn-large {
+  padding: 1.3rem 3rem;
+}
+.btn-large.btn-icon i {
+  font-size: 1rem;
+  vertical-align: middle;
+  margin-right: 0.4rem;
+}
+
+.btn-small {
+  padding: 0.5rem 1.6rem;
+  font-size: 10px;
+}
+
+.btn-round {
+  border-radius: 0.4rem;
+}
+
+.btn-round-full {
+  border-radius: 3rem;
+}
+
+.btn.active:focus,
+.btn:active:focus,
+.btn:focus {
+  outline: 0;
+}
+
+/*=== Page Header ===*/
+.page-header {
+  background: #f5f5f5;
+  margin-top: 0 !important;
+  border-bottom: none;
+  padding: 2rem 0;
+}
+.page-header h1 {
+  font-weight: 200;
+  margin: 0 0 0.375rem 0;
+}
+.page-header .breadcrumb {
+  background: transparent;
+  padding: 0.5rem;
+  margin: 0;
+}
+.page-header .breadcrumb li {
+  font-weight: 200;
+  font-size: 1.25rem;
+}
+.breadcrumb > .active {
+  color: #707070;
+}
+.page-header .breadcrumb li a {
+  color: #000;
+  font-weight: 400;
+}
+
+.single-page-header {
+  padding: 140px 0 70px;
+  text-align: center;
+  color: #fff;
+  position: relative;
+}
+
+.top-header .container {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  border-bottom: 1px solid #dedede;
+}
+.top-header .dropdown-menu {
+  left: auto;
+  right: 0;
+  max-width: 300px;
+}
+@media (max-width: 480px) {
+  .top-header .dropdown-menu {
+    right: 0;
+    left: 0;
+    max-width: 100%;
+  }
+}
+.top-header .contact-number {
+  font-size: 12px;
+  color: #333;
+}
+@media (max-width: 480px) {
+  .top-header .contact-number {
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .top-header .contact-number {
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+.top-header .contact-number i {
+  margin-right: 4px;
+  font-size: 18px;
+  vertical-align: middle;
+}
+@media (max-width: 768px) {
+  .top-header .top-menu {
+    text-align: center;
+    padding: 10px 0;
+  }
+}
+.top-header .top-menu > li > a {
+  color: #333;
+  font-size: 15px;
+  padding: 0 8px;
+}
+.top-header .top-menu > li > a:hover,
+.top-header .top-menu > li > a:focus {
+  background: transparent;
+}
+.top-header .top-menu > li > a i {
+  font-size: 16px;
+  margin-right: 2px;
+  vertical-align: middle;
+}
+@media (max-width: 480px) {
+  .top-header .logo {
+    padding: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .top-header .logo {
+    padding: 10px;
+  }
+}
+.top-header .logo a {
+  display: inline-block;
+}
+
+/*=== Navigation ===*/
+.navigation {
+  margin-bottom: 0;
+  padding: 10px 0;
+}
+.navigation .menu-title {
+  display: none;
+  font-size: 16px;
+}
+@media (max-width: 480px) {
+  .navigation .menu-title {
+    display: inline-block;
+    padding-left: 10px;
+  }
+}
+@media (max-width: 768px) {
+  .navigation .menu-title {
+    display: inline-block;
+    padding-left: 10px;
+  }
+}
+.navigation .navbar-nav > li {
+  position: static;
+}
+.navigation .navbar-nav > li.active a {
+  color: #000;
+}
+.navigation .navbar-nav > li > a {
+  color: #333;
+  font-size: 14px;
+  padding: 20px 15px;
+  text-transform: uppercase;
+  transition: 0.2s ease-in-out 0s;
+  border: 1px solid transparent;
+}
+.navigation .navbar-nav > li > a:hover,
+.navigation .navbar-nav > li > a:active,
+.navigation .navbar-nav > li > a:focus {
+  background: none;
+  color: #000;
+}
+.navigation .container {
+  position: relative;
+}
+.navigation .nav .open > a {
+  border: 1px solid transparent;
+  background-color: transparent;
+}
+.navigation .navbar-nav {
+  float: none;
+  display: inline-block;
+}
+
+/*=== Alerts ===*/
+.alert-common {
+  border-radius: 0;
+  border-width: 2px;
+}
+.alert-common i {
+  margin: 0 5px;
+  font-size: 16px;
+}
+
+.alert-solid {
+  background: transparent;
+  color: #000;
+}
+
+.error {
+  display: none;
+  padding: 10px;
+  color: #d8000c;
+  border-radius: 4px;
+  font-size: 13px;
+  background-color: #ffbaba;
+}
+
+.success {
+  background-color: #6cb670;
+  border-radius: 4px;
+  color: #fff;
+  display: none;
+  font-size: 13px;
+  padding: 10px;
+}
+
+/*=== Bootstrap Card Styles ===*/
+.card {
+  padding: 3rem;
+  background: #fff;
+  border: 1px solid rgba(19, 24, 44, 0.125);
+  border-width: 0;
+  border-radius: 0.25rem;
+  box-shadow: 0 1px 3px #999;
+  margin-bottom: 1.5rem;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  word-wrap: break-word;
+  background-color: #fff;
+  background-clip: border-box;
+}
+
+.card-header {
+  /* padding: 0 1rem; */
+  margin-bottom: 0;
+  background-color: rgba(19, 24, 44, 0.03);
+  border-bottom: 1px solid rgba(19, 24, 44, 0.125);
+}
+
+.card-text {
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+  font-size: 1.5rem;
+  color: #757575;
+}
+
+.card-header:first-child {
+  border-radius: calc(0.25rem - 1px) calc(0.25rem - 1px) 0 0;
+}
+
+card-footer,
+.card-header {
+  background-color: transparent;
+  border-color: #ccc;
+  background-clip: padding-box;
+}
+
+.container {
+  padding: 3rem;
+}

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic Page Needs
+  ================================================== -->
+    <meta charset="utf-8" />
+    <title>a11y Exercise Solution: Semantic HTML</title>
+
+    <!-- Mobile Specific Metas
+  ================================================== -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../assets/images/favicon.png"
+    />
+
+    <!-- bootstrap.min css -->
+    <link
+      rel="stylesheet"
+      href="../assets/plugins/bootstrap/css/bootstrap.min.css"
+    />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="../assets/css/global.css" />
+  </head>
+
+  <body id="body">
+    <header class="page-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="content">
+              <h1 class="page-name">Solution: Semantic HTML</h1>
+              <ol class="breadcrumb">
+                <li><a href="../index.html">Home</a></li>
+                <li>Solutions</li>
+                <li class="active">Semantics</li>
+              </ol>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container mt-5">
+      <header aria-label="exercise banner" class="text-center mb-4">
+        <h1>Welcome to My Blog</h1>
+      </header>
+      <main class="card mb-4">
+        <article class="card-body">
+          <h2 class="card-title">Accessible Blog Post</h2>
+          <p class="card-text">
+            This is a post about how to make your blog more accessible. There
+            are so many different ways you can solve for accessibility
+          </p>
+          <p class="card-text">
+            <small datetime="2024-09-01">Posted on September 1, 2024</small>
+          </p>
+        </article>
+        <nav class="card-body">
+          <ul class="list-unstyled">
+            <li>Read more:</li>
+            <li><a href="#">Accessibility Tips</a></li>
+            <li><a href="#">Semantic HTML Guide</a></li>
+          </ul>
+        </nav>
+      </main>
+      <footer class="text-center mt-4">
+        <p>© 2024 My Blog</p>
+      </footer>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

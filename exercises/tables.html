@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8" />
+    <title>a11y Exercise: Accessible Tables</title>
+
+    <!-- Mobile Specific Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../assets/images/favicon.png"
+    />
+
+    <!-- bootstrap.min css -->
+    <link
+      rel="stylesheet"
+      href="../assets/plugins/bootstrap/css/bootstrap.min.css"
+    />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/tables.css" />
+  </head>
+
+  <body id="body">
+    <header class="page-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="content">
+              <h1 class="page-name">Exercise: Accessible Tables</h1>
+              <ol class="breadcrumb">
+                <li><a href="../index.html">Home</a></li>
+                <li>Exercises</li>
+                <li class="active">Tables</li>
+              </ol>
+              <h2>Instructions</h2>
+              <ol>
+                <li>1. Inspect the following data tables</li>
+                <li>
+                  2. Identify and fix the accessibility issues using HTML
+                  techniques.
+                </li>
+                <li>
+                  3. Test the page using
+                  <a
+                    role="link"
+                    href="https://www.ssa.gov/accessibility/andi/help/install.html"
+                    >ANDI</a
+                  >, and a screen reader to ensure your changes are accessible.
+                </li>
+              </ol>
+
+              <ul class="listexercise">
+                <li>Additional Resources:</li>
+                <li>
+                  <a
+                    href="https://www.w3.org/WAI/tutorials/tables/two-headers/"
+                    target="_blank"
+                    >Tables with two headers</a
+                  >
+                </li>
+                <li>
+                  <a
+                    href="https://www.w3.org/WAI/tutorials/tables/irregular/"
+                    target="_blank"
+                    >Tables with irregular headers</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <main>
+        <div class="container">
+          <h2 class="mt-5">A simple table with row and column headers</h2>
+          <table class="table table-bordered table-striped">
+            <caption class="sr-only">
+              Greensprings Running Club Personal Bests
+            </caption>
+            <thead class="thead-dark">
+              <tr>
+                <th>Name</th>
+                <th>1 mile</th>
+                <th>5 km</th>
+                <th>10 km</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th>Mary</th>
+                <td>6:32</td>
+                <td>22:44</td>
+                <td>45:16</td>
+              </tr>
+              <tr>
+                <th>Betsy</th>
+                <td>7:43</td>
+                <td>26:47</td>
+                <td>55:38</td>
+              </tr>
+              <tr>
+                <th>Matt</th>
+                <td>5:55</td>
+                <td>21:09</td>
+                <td>42:17</td>
+              </tr>
+              <tr>
+                <th>Todd</th>
+                <td>7:01</td>
+                <td>24:21</td>
+                <td>50:35</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <h2 class="mt-5">
+            A complex table with column headers and merged row headers
+          </h2>
+          <table class="table table-bordered table-striped">
+            <caption class="sr-only">
+              Greensprings Running Club Personal Bests
+            </caption>
+            <thead class="thead-dark">
+              <tr>
+                <td colspan="2">&nbsp;</td>
+                <th>1 mile</th>
+                <th>5 km</th>
+                <th>10 km</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th rowspan="3">Females</th>
+                <th>Mary</th>
+                <td>6:32</td>
+                <td>22:44</td>
+                <td>45:16</td>
+              </tr>
+              <tr>
+                <th>Betsy</th>
+                <td>7:43</td>
+                <td>26:47</td>
+                <td>55:38</td>
+              </tr>
+              <tr>
+                <th>Joanne</th>
+                <td>9:51</td>
+                <td>38:15</td>
+                <td>1:56:01</td>
+              </tr>
+              <tr>
+                <th scope="rowgroup" rowspan="3">Males</th>
+                <th>Matt</th>
+                <td>5:55</td>
+                <td>21:09</td>
+                <td>42:17</td>
+              </tr>
+              <tr>
+                <th>Todd</th>
+                <td>7:01</td>
+                <td>24:21</td>
+                <td>50:35</td>
+              </tr>
+              <tr>
+                <th>Jake</th>
+                <td>7:51</td>
+                <td>24:31</td>
+                <td>50:45</td>
+              </tr>
+            </tbody>
+          </table>
+          <h2 class="mt-5">Another "simple" table</h2>
+          <div class="table">
+            <p>Arts and Music Schedule</p>
+            <div class="table-container">
+              <div class="table-row table-row-first">
+                <div class="left-cell table-cell"></div>
+                <div class="table-header-cell table-cell">Monday</div>
+                <div class="table-header-cell table-cell">Tuesday</div>
+                <div class="table-header-cell table-cell">Wednesday</div>
+                <div class="table-header-cell table-cell">Thursday</div>
+                <div class="table-header-cell table-cell table-cell-last">
+                  Friday
+                </div>
+              </div>
+              <div class="table-row">
+                <div class="left-cell table-header-cell table-cell">
+                  9:00 am
+                </div>
+                <div class="table-cell">Band</div>
+                <div class="table-cell">Choir</div>
+                <div class="table-cell">Orchestra</div>
+                <div class="table-cell">Orchestra</div>
+                <div class="table-cell table-cell-last">Dress rehearsal</div>
+              </div>
+              <div class="table-row">
+                <div class="left-cell table-header-cell table-cell">
+                  10:00 am
+                </div>
+                <div class="table-cell">Strings</div>
+                <div class="table-cell">Dance</div>
+                <div class="table-cell">Choir</div>
+                <div class="table-cell">Dance</div>
+                <div class="table-cell table-cell-last">Art show set up</div>
+              </div>
+              <div class="table-row">
+                <div class="left-cell table-header-cell table-cell">
+                  11:00 am
+                </div>
+                <div class="table-cell">Art studio</div>
+                <div class="table-cell">Art studio</div>
+                <div class="table-cell">Art studio</div>
+                <div class="table-cell">Art studio</div>
+                <div class="table-cell table-cell-last">Award ceremoy</div>
+              </div>
+              <div class="table-row">
+                <div class="left-cell table-header-cell table-cell">
+                  1:00 pm
+                </div>
+                <div class="table-cell">Cullinary arts</div>
+                <div class="table-cell">Creative writing</div>
+                <div class="table-cell">Cullinary arts</div>
+                <div class="table-cell">Creative writing</div>
+                <div class="table-cell table-cell-last">Concert</div>
+              </div>
+              <div class="table-row last-row">
+                <div class="left-cell table-header-cell table-cell">
+                  2:00 pm
+                </div>
+                <div class="table-cell">Studio time</div>
+                <div class="table-cell">Creative lab</div>
+                <div class="table-cell">Studio time</div>
+                <div class="table-cell">Creative lab</div>
+                <div class="table-cell table-cell-last">Art show</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>

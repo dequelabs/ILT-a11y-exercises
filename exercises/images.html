@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Basic Page Needs -->
+    <meta charset="utf-8" />
+    <title>a11y Exercise: Image Techniques</title>
+
+    <!-- Mobile Specific Metas -->
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=5.0"
+    />
+
+    <!-- Favicon -->
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../assets/images/favicon.png"
+    />
+
+    <!-- bootstrap.min css -->
+    <link
+      rel="stylesheet"
+      href="../assets/plugins/bootstrap/css/bootstrap.min.css"
+    />
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="../assets/css/global.css" />
+    <link rel="stylesheet" href="../assets/css/images.css" />
+  </head>
+
+  <body id="body">
+    <header class="page-header">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <div class="content">
+              <h1 class="page-name">Exercise: Image Techniques</h1>
+              <ol class="breadcrumb">
+                <li><a href="../index.html">Home</a></li>
+                <li>Exercises</li>
+                <li class="active">Images</li>
+              </ol>
+              <h2>Instructions</h2>
+              <ol>
+                <li>
+                  1. Apply HTML and/or ARIA to give each image an appropriate
+                  text alternative.
+                </li>
+                <li>
+                  2. Verify your changes with a screen reader, or axe dev tools!
+                </li>
+              </ol>
+              <strong>Note:</strong> We've supplied tips for each image, because
+              writing excellent alt text is more effective where there is
+              context.
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="container">
+      <main>
+        <div class="image-container">
+          <h2>Informative <code>&lt;img&gt;</code></h2>
+          <p>
+            Tip: The description should convey all of the information and
+            meaning in the image.
+          </p>
+          <img
+            class="informative-img img-fluid"
+            src="../assets/images/splashpad_rules.jpeg"
+          />
+        </div>
+        <hr />
+        <div class="image-container">
+          <h2>Decorative <code>&lt;img&gt;</code></h2>
+          <p>
+            Tip: Omitting the alt attribute may result in screen readers
+            announcing the image path.
+          </p>
+          <img
+            class="decorative-img img-fluid"
+            src="../assets/images/background_image.jpg"
+          />
+        </div>
+        <hr />
+        <div class="image-container">
+          <h2>Informative <code>&lt;img&gt;</code> - CSS Background Image</h2>
+          <p>
+            Tip: Just because an image is implemented as a CSS background image
+            doesn't necessarily mean it should not be described.
+          </p>
+          <div class="informative-background-image img-fluid"></div>
+        </div>
+        <hr />
+        <div class="image-container">
+          <h2>Functional <code>&lt;img&gt;</code></h2>
+          <p>
+            Tip: Functional image descriptions should focus on the action that
+            is associated with the image.
+          </p>
+          <img class="icon img-fluid" src="../assets/images/play-button.svg" />
+        </div>
+        <hr />
+        <div class="image-container">
+          <h2>Text <code>&lt;img&gt;</code></h2>
+          <p>
+            Tip: It's important that we include all of the text and any other
+            relevant information in an image of text.
+          </p>
+          <img
+            class="text-image img-fluid"
+            src="../assets/images/is-this-just-fantasy.jpg"
+          />
+        </div>
+        <hr />
+        <div class="image-container">
+          <h2>Link <code>&lt;img&gt;</code> - Help Icon</h2>
+          <p>
+            Tip: This images accessible name is currently derived from the child
+            content. But we can do better! Use ARIA to provide a more meaningful
+            name to this icon.
+          </p>
+          <a href="#" class="help-icon">?</a>
+        </div>
+        <hr />
+        <div class="image-container">
+          <h2>Inline <code>&lt;svg&gt;</code></h2>
+          <p>
+            Tip: This svg is a decorative image. Assign the svg alt text, and
+            give it an aria attribute that will hide its redundancy from a
+            screen reader.
+          </p>
+          <p class="svg-text">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              shape-rendering="geometricPrecision"
+              text-rendering="geometricPrecision"
+              image-rendering="optimizeQuality"
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              viewBox="0 0 512 512"
+              class="icon img-fluid"
+            >
+              <path
+                d="M256 0c70.68 0 134.69 28.66 181.02 74.98C483.34 121.3 512 185.31 512 256c0 70.68-28.66 134.69-74.98 181.02C390.69 483.34 326.68 512 256 512c-70.69 0-134.7-28.66-181.02-74.98C28.66 390.69 0 326.68 0 256c0-70.69 28.66-134.7 74.98-181.02C121.3 28.66 185.31 0 256 0zm-91.6 236.61c18.39 10.59 30.36 19.4 44.61 35.11 36.96-59.51 77.08-92.47 129.26-139.26l5.1-1.97h57.09c-76.55 85.02-135.9 155.12-189.04 257.63-27.67-59.16-52.33-99.99-107.51-137.85l60.49-13.66z"
+              />
+            </svg>
+            You've got this! Keep up the great work!
+          </p>
+        </div>
+        <hr />
+      </main>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
